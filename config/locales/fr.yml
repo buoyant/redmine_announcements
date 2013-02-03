@@ -1,6 +1,15 @@
-# Sample plugin
+# Redmine Announcements plugin
 fr:
-  label_plugin_example: Plugin exemple
-  label_meeting_plural: Meetings
-  text_say_hello: Plugin dit 'Bonjour'
-  text_say_goodbye: Plugin dit 'Au revoir'
+  label_announcements: 'Annonces'
+  label_new_announcement: 'nouveau Annonce'
+  label_message: 'Message'
+  label_starts_at: 'À Partir De'
+  label_ends_at: 'Fini le'
+  label_submit: 'soumettre'
+  label_edit: 'éditer'
+  label_delete: 'effacer'
+  label_confirm_message: 'Êtes-vous sûr de vouloir supprimer le annonce?'
+  label_blank: "ne peut pas être vide"
+  label_announcement_created: 'Annonce a été créé avec succès.'
+  label_error: 'une erreur s'est produite.'
+  label_announcement_updated: 'Annonce a été correctement mis à jour.'

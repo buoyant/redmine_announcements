@@ -1,5 +1,5 @@
 <style type="text/css">
-	table.list thead tr th { color: #005782; }	
+    table.list thead tr th { color: #005782; }
 </style>
 
 <%= content_tag :div, link_to(l(:label_new_announcement), new_announcement_path(:project_id => params[:project_id]), :class => "icon icon-add"), :class => "contextual"  -%>
@@ -7,21 +7,21 @@
 <h2><%= l(:label_announcements) %></h2>
 
 <table class="list">
-	<thead>
-	<tr>
-		<th><%= l(:label_message) %></th>
-		<th><%= l(:label_starts_at) %></th>
-		<th><%= l(:label_ends_at) %></th>
-	</tr>	
-	</thead>
-	<tbody>
-		<% @announcements.each do |announcement| %>
-	<tr class='issue'>
-		<td><%= link_to announcement.message.strip[0..30], "/announcements/#{announcement.id}?project_id=#{params[:project_id]}" %></td>
-		<td><%= announcement.starts_at %></td>
-		<td><%= announcement.ends_at %></td>		
-	</tr>	
-	<% end %>
-	</tbody>	
+  <thead>
+  <tr>
+    <th><%= l(:label_message) %></th>
+    <th><%= l(:label_starts_at) %></th>
+    <th><%= l(:label_ends_at) %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @announcements.each do |announcement| %>
+      <tr class='issue'>
+        <td><%= link_to announcement.message.strip[0..30], "/announcements/#{announcement.id}?project_id=#{params[:project_id]}" %></td>
+        <td><%= announcement.starts_at %></td>
+        <td><%= announcement.ends_at %></td>
+      </tr>
+  <% end %>
+  </tbody>
 </table>
 

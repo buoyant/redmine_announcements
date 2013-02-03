@@ -1,11 +1,11 @@
 <%= content_tag :div, :class => "contextual" do -%>
-	<%= link_to(l(:label_edit), edit_announcement_path(@announcement,:project_id => params[:project_id]), :class => 'icon icon-edit') %>
-	<%= link_to(l(:label_delete),  @announcement, :confirm => l(:label_confirm_message), :method => :delete, :class => 'icon icon-del') %>
+    <%= link_to(l(:label_edit), edit_announcement_path(@announcement,:project_id => params[:project_id]), :class => 'icon icon-edit') %>
+    <%= link_to(l(:label_delete),  @announcement, :confirm => l(:label_confirm_message), :method => :delete, :class => 'icon icon-del') %>
 <% end -%>
 
 <h2><%= @announcement.message.strip[0..30] %></h2>
 
 <div class="box tabular">
-<%= render 'form' %>
+  <%= render 'form' %>
 </div>
 

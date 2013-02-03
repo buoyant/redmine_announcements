@@ -1,5 +1,5 @@
-# Sample plugin migration
-# Use rake db:migrate_plugins to migrate installed plugins
+# Redmine Announcements plugin migration
+# Use rake remdine:plugins:migrate to migrate installed plugins
 class CreateAnnouncements < ActiveRecord::Migration
   def self.up
     create_table :announcements do |t|

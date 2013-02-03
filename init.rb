@@ -20,8 +20,8 @@ end
 
 
 require 'application_helper_patch'
-ActionDispatch::Callbacks.to_prepare do 
-ApplicationHelper.send(:include, ApplicationHelperPatch) unless ApplicationHelper.included_modules.include? ApplicationHelperPatch
+ActionDispatch::Callbacks.to_prepare do
+  ApplicationHelper.send(:include, ApplicationHelperPatch) unless ApplicationHelper.included_modules.include? ApplicationHelperPatch
 end
 
 class RedmineAnnouncementsHook < Redmine::Hook::ViewListener
