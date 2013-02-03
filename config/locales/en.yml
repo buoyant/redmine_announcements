@@ -1,0 +1,20 @@
+# Sample plugin
+en:
+  #label_plugin_example: Sample Plugin
+  #label_meeting_plural: Meetings
+  #text_say_hello: Plugin say 'Hello'
+  #text_say_goodbye: Plugin say 'Good bye'
+  label_announcements: 'Announcements'
+  label_new_announcement: 'New Announcement'  
+  label_message: 'Message'
+  label_starts_at: 'Starts At'
+  label_ends_at: 'Ends At' 
+  label_submit: 'Submit'
+  label_edit: 'Edit'
+  label_delete: 'Delete'  
+  label_confirm_message: 'Are you sure you want to delete the announcement?'
+  label_blank: "can't be blank"
+  label_announcement_created: 'announcement has been successfully created.'
+  label_error: 'some error occured.'   
+  label_announcement_updated: 'announcement was successfully updated.'
+  

@@ -1,0 +1,15 @@
+== Redmine Announcements plugin
+
+This is a Redmine Announcements plugin for Redmine
+
+== Installation
+
+1. Copy the plugin directory into the "plugins" directory at the root
+   of your Redmine directory
+
+2. Migrate and copy plugin assets:
+   rake redmine:plugins:migrate
+
+3. Start Redmine
+
+Installed plugins are listed and can be configured from 'Admin -> Plugins' screen.

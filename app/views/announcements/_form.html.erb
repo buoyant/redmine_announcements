@@ -1,0 +1,31 @@
+<%= form_for @announcement do |f| %>
+  <% if @announcement.errors.any? %>
+    <div id="errorExplanation">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @announcement.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 	<%= hidden_field_tag 'project_id', @project.identifier %>
+  <p>
+    <%= f.label :message, l(:label_message) %>
+    <%= f.text_area :message %>
+  </p>
+  
+  <p>
+    <%= f.label :starts_at, l(:label_starts_at) %>
+    <%= f.datetime_select :starts_at %>
+  </p>
+  
+    <p>
+    <%= f.label :ends_at, l(:label_ends_at) %>
+    <%= f.datetime_select :ends_at %>
+  </p>
+	
+	
+  <p class="button"><%= f.submit l(:label_submit) %></p>
+  
+<% end %>

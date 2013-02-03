@@ -1,0 +1,25 @@
+<style type="text/css">
+#announcement {
+  width: 100%;
+  background-color: #FCFFB4;
+  border: solid 5px yellow;
+  padding: 10px 0;
+  text-align: center;
+  a {
+    font-size: 12px;
+    margin-left: 5px;
+    color: #6E5910;
+  }
+}
+</style>
+
+<%= javascript_tag "$(document).ready(function(){$('h2:first').after($('#announcement'));});" %>
+
+<% unless current_announcements.empty? %>
+	<div id="announcement">
+		<% for announcement in current_announcements %>
+			<p><%=h announcement.message %></p>
+		<% end %>
+		<p><%= link_to "Hide this message", hide_announcement_announcements_url %></p>
+	</div>
+<% end %>
