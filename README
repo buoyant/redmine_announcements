@@ -8,8 +8,8 @@ This is a Redmine Announcements plugin for Redmine
    of your Redmine directory
 
 2. Migrate and copy plugin assets:
-   rake redmine:plugins:migrate
+   rake redmine:plugins:migrate RAILS_ENV=production
 
-3. Start Redmine
+3. Restart Redmine
 
 Installed plugins are listed and can be configured from 'Admin -> Plugins' screen.
