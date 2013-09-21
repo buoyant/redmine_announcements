@@ -11,5 +11,5 @@ fr:
   label_confirm_message: 'Êtes-vous sûr de vouloir supprimer le annonce?'
   label_blank: "ne peut pas être vide"
   label_announcement_created: 'Annonce a été créé avec succès.'
-  label_error: 'une erreur s'est produite.'
+  label_error: "une erreur s'est produite."
   label_announcement_updated: 'Annonce a été correctement mis à jour.'
