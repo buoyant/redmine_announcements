@@ -7,7 +7,7 @@ module ApplicationHelperPatch
   module InstanceMethods
 
     def current_announcements
-      @current_announcements ||= Announcement.current_announcements(session[:announcement_hide_time])
+      @current_announcements ||= Announcement.current_announcements(session[:announcement_hide_time],@project)
     end
 
   end # Instance Methods	

@@ -5,7 +5,7 @@ class AnnouncementsController < ApplicationController
   before_filter :find_project, :except => [:hide_announcement]
 
   def index
-    @announcements = Announcement.all
+    @announcements = Announcement.where(:project_id => @project)
   end
 
   def hide_announcement
@@ -22,17 +22,13 @@ class AnnouncementsController < ApplicationController
   end
 
   def create
-    @announcement = Announcement.new(params[:announcement])
+    @announcement = Announcement.new(params[:announcement].merge({:project_id => @project.id}))
 
     if @announcement.save
       redirect_to announcements_path(:project_id => params[:project_id]), :notice => l(:label_announcement_created)
     else
       render :new, :notice => l(:label_error)
     end
-  end
-
-  def index
-    @announcements = Announcement.all
   end
 
   def show

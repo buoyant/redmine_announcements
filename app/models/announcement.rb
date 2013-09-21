@@ -3,8 +3,8 @@ class Announcement < ActiveRecord::Base
 
   validates_presence_of :message, :message => l(:label_blank)
 
-  def self.current_announcements(hide_time)
-    with_scope :find => { :conditions => "starts_at <= now() AND ends_at >= now()" } do
+  def self.current_announcements(hide_time,project)
+    with_scope :find => { :conditions => ["starts_at <= now() AND ends_at >= now() AND project_id = ?", project] } do
       if hide_time.nil?
         find(:all)
       else
