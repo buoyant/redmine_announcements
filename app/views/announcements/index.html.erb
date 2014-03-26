@@ -18,8 +18,9 @@
   <% @announcements.each do |announcement| %>
       <tr class='issue'>
         <td><%= link_to announcement.message.strip[0..30], "/announcements/#{announcement.id}?project_id=#{params[:project_id]}" %></td>
-        <td><%= announcement.starts_at %></td>
-        <td><%= announcement.ends_at %></td>
+        <td><%= format_time(announcement.starts_at) %></td>
+        <td><%= format_time(announcement.ends_at) %></td>
+        <td><%= format_time(announcement.ends_at) %></td>
       </tr>
   <% end %>
   </tbody>
