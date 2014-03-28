@@ -3,6 +3,7 @@ class AnnouncementsController < ApplicationController
   unloadable
 
   before_filter :find_project, :except => [:hide_announcement]
+  before_filter :set_timezone, :only => [:new, :edit]
 
   def index
     @announcements = Announcement.where(:project_id => @project)
@@ -61,6 +62,11 @@ class AnnouncementsController < ApplicationController
 
   def find_project
     @project = Project.find(params[:project_id])
+  end
+
+  def set_timezone
+    # User.current.time_zone #=> 'London'
+    Time.zone = User.current.time_zone
   end
 
 end

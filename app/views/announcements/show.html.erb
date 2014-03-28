@@ -11,10 +11,10 @@
       <th><%= l(:label_message) %></th> <td>		<%= @announcement.message %></td>
     </tr>
     <tr>
-      <th><%= l(:label_starts_at) %></th> <td>		<%= @announcement.starts_at %></td>
+      <th><%= l(:label_starts_at) %></th> <td>		<%= format_time(@announcement.starts_at) %></td>
     </tr>
     <tr>
-      <th><%= l(:label_ends_at) %></th> <td>		<%= @announcement.ends_at %></td>
+      <th><%= l(:label_ends_at) %></th> <td>		<%= format_time(@announcement.ends_at) %></td>
     </tr>
     </tbody>
   </table>
